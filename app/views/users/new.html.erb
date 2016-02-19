@@ -1,5 +1,8 @@
-<h1>New User</h1>
+<% provide(:title, 'signup') %>
+<div class="container">
+  <h1 class="page-header">Sign Up</h1>
+  <%= render 'form' %>
+  <%= link_to 'Back', users_path %>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', users_path %>

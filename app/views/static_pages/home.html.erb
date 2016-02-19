@@ -1,6 +1,12 @@
 <% provide(:title, "Home") %>
-<div class="jumbotron">
-  <div class="container">
+<div class="container">
+  <div class="page-header">
     <h1>Home page</h1>
+  </div>
+  <div class="text-center">
+      <h3>Welcome to my Ruby on Rails app, please sign up :</h3>
+  </div>
+  <div class="text-center">
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-blue btn-lg btn-primary" %>
   </div>
 </div>
