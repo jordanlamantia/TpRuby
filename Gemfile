@@ -30,6 +30,11 @@ gem 'autoprefixer-rails'
 #Bcript - hashage de mot de passe
 gem 'bcrypt', '3.1.7'
 
+gem 'faker',  '1.4.2'
+
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

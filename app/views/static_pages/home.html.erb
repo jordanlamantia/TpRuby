@@ -1,12 +1,29 @@
 <% provide(:title, "Home") %>
 <div class="container">
-  <div class="page-header">
-    <h1>Home page</h1>
-  </div>
-  <div class="text-center">
-      <h3>Welcome to my Ruby on Rails app, please sign up :</h3>
-  </div>
-  <div class="text-center">
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-blue btn-lg btn-primary" %>
-  </div>
+  <% if logged_in? %>
+      <div class="row">
+        <aside class="col-md-4">
+          <section class="user_info">
+            <%= render 'shared/user_info' %>
+          </section>
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+        <div class="col-md-8">
+          <h3>Micropost Feed</h3>
+          <%= render 'shared/feed' %>
+        </div>
+      </div>
+  <% else %>
+    <div class="page-header">
+      <h1>Home page</h1>
+    </div>
+    <div class="text-center">
+        <h3>Welcome to my Ruby on Rails app, please sign up :</h3>
+    </div>
+    <div class="text-center">
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-blue btn-lg btn-primary" %>
+    </div>
+  <% end %>
 </div>
